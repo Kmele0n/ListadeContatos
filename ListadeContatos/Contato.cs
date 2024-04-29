@@ -57,23 +57,23 @@ namespace ListadeContatos
         {
             Nome = "Ednaldo";
             Sobrenome = "Pereira";
-            telefone = "(11)-99999-9999";
+            Telefone = "(11) 99999-9999";
         }
-        public Contato(string nome, string sobrenme, string telefone)
+        public Contato(string nome, string sobrenome, string telefone)
         {
             Nome=nome;
-            Sobrenome = sobrenome;
+            Sobrenome=sobrenome;
             Telefone = telefone;
         }
         public override string ToString()
 
         {
             string saida = string.Empty;
-            saida += String.Format("{0}, { 1}", Nome, Sobrenome);
-            saida += String.Format("({0} {1}-{2}", 
-                telefone.Substring(0, 2), 
-                telefone.Substring(2, 5), 
-                telefone.Substring(8, 4));
+            saida += String.Format("{0}, {1}", Nome, Sobrenome);
+            saida += String.Format("({0}) {1}-{2}", 
+                Telefone.Substring(0, 2), 
+                Telefone.Substring(2,5), 
+                Telefone.Substring(7,4));
             return saida;
            
         }
